@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // take two integer inputs from the user
+        int num1 = scanner.nextInt();
+        int num2 = scanner.nextInt();
+
+        // check if both inputs are positive
+        if (num1 > 0 && num2 > 0) {
+            // display the values separated by a '-'
+            System.out.println(num1 + "-" + num2);
+        } else {
+            // display an error message for invalid input
+            System.out.println("Invalid Input");
+        }
+    }
+}

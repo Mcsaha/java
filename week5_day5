@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class NumberComparison {
+ public static void main(String[] args) {
+ Scanner input = new Scanner(System.in);
+ 
+ 
+ int a = input.nextInt();
+ int b = input.nextInt();
+ 
+ boolean result = isBigger(a, b);
+ 
+ if (result) {
+ System.out.println("true");
+ } else {
+ System.out.println("false");
+ }
+ }
+ 
+ public static boolean isBigger(int a, int b) {
+ if (a >= 10 && a <= 1000 && b >= 10 && b <= 1000) {
+ if (a > b) {
+ return true;
+ } else {
+ return false;
+ }
+ } else {
+ System.out.println("Invalid Input");
+ return false;
+ }
+ }
+}

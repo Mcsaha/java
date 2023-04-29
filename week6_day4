@@ -1,0 +1,28 @@
+import java.util.Arrays;
+
+public class AverageMarks {
+
+ public static double[] average_marks(double[][] marks) {
+ int n = marks.length;
+ double[] result = new double[n];
+ for (int i = 0; i < n; i++) {
+ Arrays.sort(marks[i]); // sort the marks in ascending order
+ double sum = 0.0;
+ for (int j = 1; j <= 2; j++) {
+ sum += marks[i][marks[i].length - j]; // add the top two marks to the sum
+ }
+ result[i] = sum / 2.0; // calculate the average of top two marks
+ }
+ return result;
+ }
+
+ public static void main(String[] args) {
+ // sample input
+ double[][] marks = {{10.5, 2.5, 15.0}, {5.25, 6.75, 11.25}};
+ double[] avgMarks = average_marks(marks);
+ // print the output
+ for (double avg : avgMarks) {
+ System.out.print(avg + " ");
+ }
+ }
+}

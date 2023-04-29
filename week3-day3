@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class ATM {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int amount = input.nextInt();
+        
+        if (amount < 100 || amount > 20000 || amount % 100 != 0) {
+            System.out.println("Invalid Input");
+            return;
+        }
+        
+        int notesOf2000 = amount / 2000;
+        amount = amount % 2000;
+        
+        int notesOf500 = amount / 500;
+        amount = amount % 500;
+        
+        int notesOf200 = amount / 200;
+        amount = amount % 200;
+        
+        int notesOf100 = amount / 100;
+        
+        System.out.println(notesOf2000 + " 2000 Notes");
+        System.out.println(notesOf500 + " 500 Notes");
+        System.out.println(notesOf200 + " 200 Notes");
+        System.out.println(notesOf100 + " 100 Notes");
+    }
+}

@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class CricketScore {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int fours = sc.nextInt();
+        int sixes = sc.nextInt();
+
+        // Make sure the inputs are non-negative
+        fours = Math.max(fours, 0);
+        sixes = Math.max(sixes, 0);
+
+        // Calculate the total score
+        int totalScore = fours * 4 + sixes * 6;
+
+        System.out.println(totalScore);
+    }
+}

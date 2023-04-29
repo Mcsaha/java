@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Main {
+ public static boolean check(int n) {
+ if (n < 20 || n > 400) {
+ // number is not in the valid range
+ return false;
+ }
+ if (n % 2 == 0 && n % 3 == 0) {
+ // number is even and a multiple of 3
+ return true;
+ }
+ // number doesn't satisfy the conditions
+ return false;
+ }
+
+ public static void main(String[] args) {
+ Scanner scanner = new Scanner(System.in);
+
+ // take input
+ int n = scanner.nextInt();
+
+ // call the check method and display the result
+ if (check(n)) {
+ System.out.println("True");
+ } else {
+ System.out.println("Invalid Input");
+ }
+ }
+}

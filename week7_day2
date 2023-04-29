@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class PasswordManager {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Read the password from the user
+        System.out.print("Enter password: ");
+        String password = scanner.nextLine();
+
+        // Convert the password to Python case format
+        String pythonCasePassword = toPythonCase(password);
+
+        // Print the result
+        System.out.println("Python case password: " + pythonCasePassword);
+
+        scanner.close();
+    }
+
+    public static String toPythonCase(String password) {
+        // Convert the password to lowercase
+        password = password.toLowerCase();
+
+        // Replace spaces with "$"
+        password = password.replace(' ', '$');
+
+        return password;
+    }
+}

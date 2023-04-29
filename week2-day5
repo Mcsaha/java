@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Read input as floating-point numbers
+        double red = scanner.nextDouble();
+        double green = scanner.nextDouble();
+        double blue = scanner.nextDouble();
+        
+        // Convert floating-point numbers to integers by rounding up to the nearest integer
+        int redBalls = (int) Math.ceil(red);
+        int greenBalls = (int) Math.ceil(green);
+        int blueBalls = (int) Math.ceil(blue);
+        
+        // Output the integer values
+        System.out.println(redBalls + " " + greenBalls + " " + blueBalls);
+        
+        scanner.close();
+    }
+}

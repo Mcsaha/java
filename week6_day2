@@ -1,0 +1,60 @@
+import java.util.Scanner;
+
+class Integer1 {
+ private int[] arr;
+
+ public Integer1(int[] arr) {
+ this.arr = arr;
+ }
+
+ public int sum() {
+ int sum = 0;
+ for (int i : arr) {
+ sum += i;
+ }
+ return sum;
+ }
+
+ public int multiplication() {
+ int mul = 1;
+ for (int i : arr) {
+ mul *= i;
+ }
+ return mul;
+ }
+}
+
+public class Main {
+ public static void main(String[] args) {
+ Scanner scanner = new Scanner(System.in);
+
+ // take size of array input
+ int size = scanner.nextInt();
+
+ if (size <= 0) {
+ System.out.println("Invalid Array Size");
+ return;
+ }
+
+ // take array elements input
+ int[] arr = new int[size];
+ for (int i = 0; i < size; i++) {
+ arr[i] = scanner.nextInt();
+ }
+
+ // take choice input
+ int choice = scanner.nextInt();
+
+ // create an Integer1 object with the given array
+ Integer1 integer1 = new Integer1(arr);
+
+ // perform the chosen operation and display the result
+ if (choice == 1) {
+ System.out.println(integer1.sum());
+ } else if (choice == 2) {
+ System.out.println(integer1.multiplication());
+ } else {
+ System.out.println("Wrong Choice");
+ }
+ }
+}

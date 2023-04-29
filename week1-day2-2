@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int input = scanner.nextInt();
+
+        if (input >= 0) {
+            double output = (double) input;
+            System.out.println(output);
+        } else {
+            System.out.println("Invalid Input");
+        }
+    }
+}

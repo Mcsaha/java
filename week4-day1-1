@@ -1,0 +1,40 @@
+
+import java.util.*;
+
+enum Subject {
+ Java(4, "Shruti"),
+ OS(3, "Puneet Kumar"),
+ AI(2, "James William"),
+ Android(3, "Md. Adil Khan");
+
+ private final int credits;
+ private final String facultyName;
+
+ Subject(int credits, String facultyName) {
+ this.credits = credits;
+ this.facultyName = facultyName;
+ }
+
+ public int getCredits() {
+ return credits;
+ }
+
+ public String getFacultyName() {
+ return facultyName;
+ }
+}
+
+public class Main {
+ public static void main(String[] args) {
+ Scanner sc = new Scanner(System.in);
+ String subject = sc.nextLine();
+ sc.close();
+
+ try {
+ Subject selectedSubject = Subject.valueOf(subject);
+ System.out.println(selectedSubject.getFacultyName() + " " + selectedSubject.getCredits());
+ } catch (IllegalArgumentException e) {
+ System.out.println("This subject is not running in this semester.");
+ }
+ }
+}
